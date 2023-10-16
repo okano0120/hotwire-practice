@@ -4,10 +4,7 @@
 
 <div id="products">
   <% @products.each do |product| %>
-    <%= render product %>
-    <p>
-      <%= link_to "Show this product", product %>
-    </p>
+    <%= turbo_frame_tag product, src: product_path(product) %>
   <% end %>
 </div>
 
